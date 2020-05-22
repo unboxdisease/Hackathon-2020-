@@ -1,0 +1,46 @@
+
+
+body {
+	color : white;
+	margin: 0;
+	font-family:  Lato , Helvetica, sans-serif;
+	font-style :italic;
+	font-weight :bold;
+	background-color: black;
+	background-size: cover;
+	background-image: url("/home/arohi/Iss_Assign/img/wall.jpeg");
+	background-repeat: no-repeat;
+	background-position: center center;    
+	background-attachment: fixed;
+
+}
+img {
+	display: block;
+	border-radius:50%;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	height: auto;
+}
+
+li {
+	display: inline;
+}
+@media only screen and (max-width: 620px) {
+
+				#typed-strings
+				{
+				font-size:0.2vh;
+				
+				}
+img
+{
+width: 40vw;
+height: 40vw;
+
+}
+	body {
+		font-size: 2em;
+	}
+
+}
