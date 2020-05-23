@@ -95,3 +95,15 @@ h2 {
 {
 	font-size: 50px;
 }
+
+#roll {
+	height: 40px;
+	font-size: 50px;
+	width : 400px;
+}
+
+#time {
+	height: 40px;
+	font-size: 50px;
+	width : 200px;
+}
