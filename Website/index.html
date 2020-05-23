@@ -179,10 +179,16 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>BOOK</h2>
+          <button id = "book" onclick="fun()">BOOK</button>
+          <script>
+            var book = getElementById('book');
+            function fun(){
+              input.style.display = "block";
+            }
+            </script>
         </div>
 
-        <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
+        <!-- <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
 
           <div class="col-lg-5">
             <div class="info">
@@ -206,8 +212,8 @@
 
             </div>
 
-          </div>
-
+          </div> -->
+          <div id="input" >
           <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
 
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
@@ -253,13 +259,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h4>IMPROVEMENTS</h4>
-            
+            <span>GANJA CHAHIYE</span>
           </div>
           <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            
           </div>
         </div>
       </div>
