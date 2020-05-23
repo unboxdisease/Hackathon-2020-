@@ -581,6 +581,14 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 30px;
+  color: #0880e8;  
+}
+
+#book {
+  color: #ffffff;
+  background-color: #0880e8;
+  height: 50px;
+  width: 100px;
 }
 
 .section-title h2 {
@@ -612,6 +620,8 @@ section {
   box-shadow: 5px 10px 29px 0 rgba(68, 88, 144, 0.2);
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
+  margin-left: 100px;
+  width: 100000000px; 
 }
 
 .icon-boxes .icon {
@@ -640,7 +650,14 @@ section {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
-  color: #777777;
+  color: #3607a5bb;
+}
+.icon-boxes .status {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+  color: #037d81;
+  font-weight: bolder;
 }
 
 /*--------------------------------------------------------------
@@ -2444,4 +2461,9 @@ section {
 
 #footer .credits a {
   color: #f6b024;
+}
+
+
+#input {
+  display: none;
 }

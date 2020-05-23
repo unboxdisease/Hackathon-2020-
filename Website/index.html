@@ -126,7 +126,8 @@
             <div class="icon-box">
               <div class="icon"><img src="./img/housekeeping.png"></div>
               <h4 class="title"><a href="">MACHINE 1</a></h4>
-              <p class="description">yaha status aayega </p>
+              <p class ="status">CURRENT STATUS : FREE</p>
+              <p class="description"></p>
             </div>
           </div>
 
@@ -134,7 +135,12 @@
             <div class="icon-box">
               <div class="icon"><img src="./img/housekeeping.png"></div>
               <h4 class="title"><a href="">MACHINE 2</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <p class="status">CURRENT STATUS : IN USE</p>
+              <p class = "description">
+              BY : 2019101085 <br>
+            ROOM NO : 553 <br>
+          TIME REMAINING : 30 MIN<br>
+          <progress value = "10" max = "40"/></p> 
             </div>
           </div>
 
@@ -142,7 +148,8 @@
             <div class="icon-box">
               <div class="icon"><img src="./img/housekeeping.png"></div>
               <h4 class="title"><a href="">MACHINE 3</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p class="status">CURRENT STATUS : FREE</p>
+              <p class = "description"></p>
             </div>
           </div>
 
@@ -173,10 +180,16 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>BOOK</h2>
+          <button id = "book" onclick="fun()">BOOK</button>
+          <script>
+            var book = getElementById('book');
+            function fun(){
+              input.style.display = "block";
+            }
+            </script>
         </div>
 
-        <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
+        <!-- <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
 
           <div class="col-lg-5">
             <div class="info">
@@ -200,8 +213,8 @@
 
             </div>
 
-          </div>
-
+          </div> -->
+          <div id="input" >
           <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
 
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
@@ -238,90 +251,7 @@
       </div>
     </section><!-- End Contact Section -->
 
-  </main><!-- End #main -->
-  <!-- ======= Team Section ======= -->
-  <section id="team" class="team section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Team</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div>
-
-      <div class="row">
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-              <div class="social">
-                <a href=""><i class="ri-twitter-fill"></i></a>
-                <a href=""><i class="ri-facebook-fill"></i></a>
-                <a href=""><i class="ri-instagram-fill"></i></a>
-                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Sarah Jhonson</h4>
-              <span>Product Manager</span>
-              <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-              <div class="social">
-                <a href=""><i class="ri-twitter-fill"></i></a>
-                <a href=""><i class="ri-facebook-fill"></i></a>
-                <a href=""><i class="ri-instagram-fill"></i></a>
-                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-              <div class="social">
-                <a href=""><i class="ri-twitter-fill"></i></a>
-                <a href=""><i class="ri-facebook-fill"></i></a>
-                <a href=""><i class="ri-instagram-fill"></i></a>
-                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-              <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-              <div class="social">
-                <a href=""><i class="ri-twitter-fill"></i></a>
-                <a href=""><i class="ri-facebook-fill"></i></a>
-                <a href=""><i class="ri-instagram-fill"></i></a>
-                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Team Section -->
+  </main><!-- End Team Section -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -330,13 +260,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h4>IMPROVEMENTS</h4>
-            
+            <span>GANJA CHAHIYE</span>
           </div>
           <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            
           </div>
         </div>
       </div>
