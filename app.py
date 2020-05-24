@@ -24,9 +24,7 @@ def root():
     
     if request.form:
         form = request.form
-        rol = form['roll']
-        room = form['room']
-        machine = form['num']
+        
         b = Book(
             rollnumber = form['roll'],
             room = form['room'],
@@ -37,9 +35,20 @@ def root():
         db.session.commit()
         return redirect('/')
     else:
-        mach = Book.query.order_by(Book.id.desc()).first()
+        machs = Book.query.order_by(Book.id).all()
+        for mach in machs:
+            if mach.machine == 1:
+                mach1 = mach.rollnumber
+                room1 = mach.room
+            if mach.machine == 2:
+                mach2 = mach.rollnumber
+                room2 = mach.room
+            if mach.machine == 3:
+                mach3 = mach.rollnumber
+                room3 = mach.room
+
         
-    return render_template('index.html',mach= mach)
+        return render_template('index.html',mach= mach,mach1=mach1,mach2=mach2,mach3=mach3,room1 = room1,room2 = room2,room3 = room3)
 
 
 

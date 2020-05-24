@@ -120,6 +120,11 @@
     <!-- ======= Icon Boxes Section ======= -->
     <section id="icon-boxes" class="icon-boxes">
       <div class="container">
+       
+        
+        
+
+
 
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
@@ -127,7 +132,11 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 1</a></h4>
               <p class ="status">CURRENT STATUS : FREE</p>
-              <p class="description"></p>
+              
+              <p class="description">BY : {{mach1}} <br>
+                ROOM NO : {{room1}} <br>
+              TIME REMAINING : 30 MIN<br></p>
+              <progress value = "10" max = "40"></p> 
             </div>
           </div>
 
@@ -137,8 +146,8 @@
               <h4 class="title"><a href="">MACHINE 2</a></h4>
               <p class="status">CURRENT STATUS : IN USE</p>
               <p class = "description">
-              BY : {{mach.rollnumber}} <br>
-            ROOM NO : {{mach.room}} <br>
+              BY : {{mach2}} <br>
+            ROOM NO : {{room2}} <br>
           TIME REMAINING : 30 MIN<br>
           <progress value = "10" max = "40"></p> 
             </div>
@@ -149,7 +158,10 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 3</a></h4>
               <p class="status">CURRENT STATUS : FREE</p>
-              <p class = "description"></p>
+              <p class = "description">BY : {{mach3}} <br>
+                ROOM NO : {{room3}} <br>
+              TIME REMAINING : 30 MIN<br>
+              <progress value = "10" max = "40"></p>
             </div>
           </div>
 
@@ -180,41 +192,11 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <button id = "book" onclick="fun()">BOOK</button>
-          <script>
-            var book = getElementById('book');
-            function fun(){
-              input.style.display = "block";
-            }
-            </script>
+          <h2>BOOK</h2>
+         
         </div>
 
-        <!-- <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
-
-          <div class="col-lg-5">
-            <div class="info">
-              <div class="address">
-                
-                <h4>MACHINE 1 </h4>
-                <p>slots-</p>
-              </div>
-
-              <div class="email">
-                
-                <h4>MACHINE 2-</h4>
-                <p>slots - </p>
-              </div>
-
-              <div class="phone">
-                
-                <h4>MACHINE 3-</h4>
-                <p>slots-</p>
-              </div>
-
-            </div>
-
-          </div> -->
-          <div id="input" >
+          
           <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
 
             <form action="/" method="POST" role="form" class="php-email-form">
@@ -240,7 +222,7 @@
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
 
-          </div>
+          
 
         </div>
 
