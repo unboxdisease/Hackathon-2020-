@@ -2468,3 +2468,8 @@ section {
 #input {
   display: none;
 }
+
+ul {
+  color: #ffffff;
+  text-align: left;
+}
