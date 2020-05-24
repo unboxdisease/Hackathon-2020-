@@ -133,9 +133,9 @@
               <h4 class="title"><a href="">MACHINE 1</a></h4>
               <p class ="status">CURRENT STATUS : FREE</p>
               
-              <p class="description">BY : {{mach1}} <br>
-                ROOM NO : {{room1}} <br>
-              TIME REMAINING : 30 MIN<br></p>
+              <p class="description">BY : {{mach1.rollnumber}} <br>
+                ROOM NO : {{mach1.room}} <br>
+              TIME added : {{mach1.time.time()}}<br></p>
               <progress value = "10" max = "40"></p> 
             </div>
           </div>
@@ -146,9 +146,9 @@
               <h4 class="title"><a href="">MACHINE 2</a></h4>
               <p class="status">CURRENT STATUS : IN USE</p>
               <p class = "description">
-              BY : {{mach2}} <br>
-            ROOM NO : {{room2}} <br>
-          TIME REMAINING : 30 MIN<br>
+              BY : {{mach2.rollnumber}} <br>
+            ROOM NO : {{mach2.room}} <br>
+          TIME added : {{mach2.time.time()}}<br>
           <progress value = "10" max = "40"></p> 
             </div>
           </div>
@@ -158,9 +158,9 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 3</a></h4>
               <p class="status">CURRENT STATUS : FREE</p>
-              <p class = "description">BY : {{mach3}} <br>
-                ROOM NO : {{room3}} <br>
-              TIME REMAINING : 30 MIN<br>
+              <p class = "description">BY : {{mach3.rollnumber}} <br>
+                ROOM NO : {{mach3.room}} <br>
+              TIME added : {{mach3.time.time()}}<br>
               <progress value = "10" max = "40"></p>
             </div>
           </div>
