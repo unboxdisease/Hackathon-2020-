@@ -40,7 +40,7 @@ def root():
         mach1=0
         mach2=0
         mach3=0
-        
+        now = datetime.utcnow()
         machs = Book.query.order_by(Book.id).all()
         for mach in machs:
             if mach.machine == 1:
@@ -51,10 +51,10 @@ def root():
                 
             if mach.machine == 3:
                 mach3 = mach
-                
-
+        left1 = now - mach1.time       
         
-        return render_template('index.html',mach1=mach1,mach2=mach2,mach3=mach3)
+
+        return render_template('index.html',mach1=mach1,mach2=mach2,mach3=mach3,now=now)
 
 
 
