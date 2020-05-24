@@ -99,7 +99,7 @@
           <h2 class="animated fadeInDown">INSTRUCTIONS</h2>
           
           <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a> -->
-          <p class="animated fadeInUp"><ul>
+          <p class="animated fadeInUp"><ul  style="color: white;text-align: left;">
             <li>Check if there is any free Machines</li>
             <li>If yes then reserve a machine for yourself by clicking the RESERVE button below</li>
             <li>Now enter your Roll Number and Room Number</li>
@@ -143,10 +143,10 @@
               <h4 class="title"><a href="">MACHINE 1</a></h4>
               <p class ="status">CURRENT STATUS : FREE</p>
               
-              <p class="description">BY : {{mach1}} <br>
-                ROOM NO : {{room1}} <br>
-              TIME REMAINING : 30 MIN<br></p>
-              <progress value = "10" max = "40"></p> 
+              <p class="description">BY : {{mach1.rollnumber}} <br>
+                ROOM NO : {{mach1.room}} <br>
+                TIME ELAPSED : {{((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int }} minutes<br></p>
+              <progress value = "{{(now  - mach1.time).seconds/60|int}}" max = "40"></p> 
             </div>
           </div>
 
@@ -156,10 +156,11 @@
               <h4 class="title"><a href="">MACHINE 2</a></h4>
               <p class="status">CURRENT STATUS : IN USE</p>
               <p class = "description">
-              BY : {{mach2}} <br>
-            ROOM NO : {{room2}} <br>
-          TIME REMAINING : 30 MIN<br>
-          <progress value = "10" max = "40"></p> 
+              BY : {{mach2.rollnumber}} <br>
+            ROOM NO : {{mach2.room}} <br>
+            TIME ELAPSED : {{((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0) ).seconds/60)|int}} minutes<br>
+          
+          <progress value = "{{((now  - mach2.time).seconds/60)|int}}" max = "40"></p> 
             </div>
           </div>
 
@@ -168,10 +169,18 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 3</a></h4>
               <p class="status">CURRENT STATUS : FREE</p>
-              <p class = "description">BY : {{mach3}} <br>
-                ROOM NO : {{room3}} <br>
-              TIME REMAINING : 30 MIN<br>
-              <progress value = "10" max = "40"></p>
+              <p class = "description">BY : {{mach3.rollnumber}} <br>
+                ROOM NO : {{mach3.room}} <br>
+              TIME ELAPSED : {{((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int}} minutes<br>
+              <progress value = "{{(now  - mach3.time).seconds/60|int}}" max = "40"></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
+              <h4 class="title"><a href="">MACHINE 4</a></h4>
+              <p class="status">CURRENT STATUS : coming soon</p>
+              
             </div>
           </div>
 

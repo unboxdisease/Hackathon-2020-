@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import os
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -15,6 +16,7 @@ class Book(db.Model):
     rollnumber = db.Column(db.Integer, nullable = False)
     room = db.Column(db.Integer, nullable = False)
     machine = db.Column(db.Integer, nullable = False)
+    time = db.Column(db.DateTime,default = datetime.utcnow)
 
 
 db.create_all()
@@ -35,20 +37,24 @@ def root():
         db.session.commit()
         return redirect('/')
     else:
+        mach1=0
+        mach2=0
+        mach3=0
+        now = datetime.utcnow()
         machs = Book.query.order_by(Book.id).all()
         for mach in machs:
             if mach.machine == 1:
-                mach1 = mach.rollnumber
-                room1 = mach.room
+                mach1 = mach
+                
             if mach.machine == 2:
-                mach2 = mach.rollnumber
-                room2 = mach.room
+                mach2 = mach
+                
             if mach.machine == 3:
-                mach3 = mach.rollnumber
-                room3 = mach.room
+                mach3 = mach
+        left1 = now - mach1.time       
+        print left1.seconds
 
-        
-        return render_template('index.html',mach= mach,mach1=mach1,mach2=mach2,mach3=mach3,room1 = room1,room2 = room2,room3 = room3)
+        return render_template('index.html',mach1=mach1,mach2=mach2,mach3=mach3,now=now)
 
 
 
