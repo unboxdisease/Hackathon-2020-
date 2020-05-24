@@ -135,8 +135,8 @@
               
               <p class="description">BY : {{mach1.rollnumber}} <br>
                 ROOM NO : {{mach1.room}} <br>
-                TIME ELAPSED : {{now - mach1.time}}<br></p>
-              <progress value = "10" max = "40"></p> 
+                TIME ELAPSED : {{(now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds }}<br></p>
+              <progress value = "{{(now  - mach1.time).seconds}}" max = "2400"></p> 
             </div>
           </div>
 
@@ -148,9 +148,9 @@
               <p class = "description">
               BY : {{mach2.rollnumber}} <br>
             ROOM NO : {{mach2.room}} <br>
-            TIME ELAPSED : {{now - mach2.time}}<br>
+            TIME ELAPSED : {{(now.replace(microsecond=0)  - mach2.time.replace(microsecond=0) ).seconds}} seconds<br>
           
-          <progress value = "10" max = "40"></p> 
+          <progress value = "{{(now  - mach2.time).seconds}}" max = "2400"></p> 
             </div>
           </div>
 
@@ -161,8 +161,8 @@
               <p class="status">CURRENT STATUS : FREE</p>
               <p class = "description">BY : {{mach3.rollnumber}} <br>
                 ROOM NO : {{mach3.room}} <br>
-              TIME ELAPSED : {{now - mach3.time}}<br>
-              <progress value = "10" max = "40"></p>
+              TIME ELAPSED : {{(now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds}}<br>
+              <progress value = "{{(now  - mach3.time).seconds}}" max = "2400"></p>
             </div>
           </div>
 

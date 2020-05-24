@@ -52,7 +52,7 @@ def root():
             if mach.machine == 3:
                 mach3 = mach
         left1 = now - mach1.time       
-        
+        print left1.seconds
 
         return render_template('index.html',mach1=mach1,mach2=mach2,mach3=mach3,now=now)
 
