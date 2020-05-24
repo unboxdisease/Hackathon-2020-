@@ -85,8 +85,8 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animated fadeInDown">INSTRUCTIONS</h2>
-          <p class="animated fadeInUp">HOW TO USE ?? YAHA PE maybe..</p>
+          <h2 class="animated fadeInDown">BAKUL - Washing Machine Booking </h2>
+          <p class="animated fadeInUp">Now You don't need to call your friends on first floor for Machine Status !!</p>
           
         </div>
       </div>
@@ -96,8 +96,18 @@
       <!-- Slide 3 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animated fadeInDown">BAKUL - Washing Machine Booking</h2>
-          <p class="animated fadeInUp">yaha pe kuch likhne ka batao?</p>
+          <h2 class="animated fadeInDown">INSTRUCTIONS</h2>
+          
+          <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a> -->
+          <p class="animated fadeInUp"><ul  style="color: white;text-align: left;">
+            <li>Check if there is any free Machines</li>
+            <li>If yes then reserve a machine for yourself by clicking the RESERVE button below</li>
+            <li>Now enter your Roll Number and Room Number</li>
+            <li>After that a timer will be start and you have to start your machine within 10 Minutes</li>
+            <li>If failed to do so , your reservation will be cancelled and you will be banned 
+              from the machine for 5 minutes.<br>(So that others who were waiting get a chance ) </li>
+            </li>
+          </ul></p>
           <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a> -->
         </div>
       </div>
@@ -135,8 +145,8 @@
               
               <p class="description">BY : {{mach1.rollnumber}} <br>
                 ROOM NO : {{mach1.room}} <br>
-                TIME ELAPSED : {{(now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds }}<br></p>
-              <progress value = "{{(now  - mach1.time).seconds}}" max = "2400"></p> 
+                TIME ELAPSED : {{((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int }} minutes<br></p>
+              <progress value = "{{(now  - mach1.time).seconds/60|int}}" max = "40"></p> 
             </div>
           </div>
 
@@ -148,9 +158,9 @@
               <p class = "description">
               BY : {{mach2.rollnumber}} <br>
             ROOM NO : {{mach2.room}} <br>
-            TIME ELAPSED : {{(now.replace(microsecond=0)  - mach2.time.replace(microsecond=0) ).seconds}} seconds<br>
+            TIME ELAPSED : {{((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0) ).seconds/60)|int}} minutes<br>
           
-          <progress value = "{{(now  - mach2.time).seconds}}" max = "2400"></p> 
+          <progress value = "{{((now  - mach2.time).seconds/60)|int}}" max = "40"></p> 
             </div>
           </div>
 
@@ -161,8 +171,16 @@
               <p class="status">CURRENT STATUS : FREE</p>
               <p class = "description">BY : {{mach3.rollnumber}} <br>
                 ROOM NO : {{mach3.room}} <br>
-              TIME ELAPSED : {{(now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds}}<br>
-              <progress value = "{{(now  - mach3.time).seconds}}" max = "2400"></p>
+              TIME ELAPSED : {{((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int}} minutes<br>
+              <progress value = "{{(now  - mach3.time).seconds/60|int}}" max = "40"></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
+              <h4 class="title"><a href="">MACHINE 4</a></h4>
+              <p class="status">CURRENT STATUS : coming soon</p>
+              
             </div>
           </div>
 
