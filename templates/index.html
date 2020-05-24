@@ -242,7 +242,18 @@
                   
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="integer" class="form-control" name="num" id="num" placeholder="Machine Number" >
+                  <select type="integer" class="form-control" name="num" id="num" placeholder="machine number" >
+                  <option value="" disabled selected>Machine</option>
+                  {% if (((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int) >= 40 %}
+                  <option value = "1">1</option>
+                  {% endif %}
+                  {% if (((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0)).seconds/60)|int) >= 40 %}
+                  <option value = "2">2</option>
+                  {% endif %}
+                  {% if (((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int) >= 40 %}
+                  <option value = "3">3</option>
+                  {% endif %}
+                  </select>
                   
                 </div>
               </div>
