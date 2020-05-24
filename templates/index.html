@@ -142,12 +142,12 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 1</a></h4>
               <p class ="status">CURRENT STATUS : 
-                {% if (((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int) < 40 %} IN USE</p>
+                {% if (((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int) < 50 %} IN USE</p>
               
               <p class="description">BY : {{mach1.rollnumber}} <br>
                 ROOM NO : {{mach1.room}} <br>
                 TIME ELAPSED : {{((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int }} minutes<br></p>
-              <progress value = "{{(now  - mach1.time).seconds/60|int}}" max = "40"></p> 
+              <progress value = "{{(now  - mach1.time).seconds/60|int}}" max = "50"></p> 
                 {% else %}
                 <p class="status">FREE</p>
                 {% endif %}
@@ -159,13 +159,13 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 2</a></h4>
               <p class="status">CURRENT STATUS :
-                {% if (((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0)).seconds/60)|int) < 40 %} IN USE</p>
+                {% if (((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0)).seconds/60)|int) < 50 %} IN USE</p>
               <p class = "description">
               BY : {{mach2.rollnumber}} <br>
             ROOM NO : {{mach2.room}} <br>
             TIME ELAPSED : {{((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0) ).seconds/60)|int}} minutes<br>
           
-          <progress value = "{{((now  - mach2.time).seconds/60)|int}}" max = "40"></p> 
+          <progress value = "{{((now  - mach2.time).seconds/60)|int}}" max = "50"></p> 
             {% else %}
                 <p class="status">FREE</p>
                 {% endif %}
@@ -177,12 +177,12 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 3</a></h4>
               <p class="status">CURRENT STATUS :
-                {% if (((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int) < 40 %} IN USE</p>
+                {% if (((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int) < 50 %} IN USE</p>
               <p class = "description">BY : {{mach3.rollnumber}} <br>
                 ROOM NO : {{mach3.room}} <br>
               TIME ELAPSED : {{((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int}} minutes<br>
 
-              <progress value = "{{(now  - mach3.time).seconds/60|int}}" max = "40"></p>
+              <progress value = "{{(now  - mach3.time).seconds/60|int}}" max = "50"></p>
                 {% else %}
                 <p class="status">FREE</p>
                 {% endif %}
@@ -244,13 +244,13 @@
                 <div class="col-md-6 form-group">
                   <select type="integer" class="form-control" name="num" id="num" placeholder="machine number" >
                   <option value="" disabled selected>Machine</option>
-                  {% if (((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int) >= 40 %}
+                  {% if (((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int) >= 50 %}
                   <option value = "1">1</option>
                   {% endif %}
-                  {% if (((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0)).seconds/60)|int) >= 40 %}
+                  {% if (((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0)).seconds/60)|int) >= 50 %}
                   <option value = "2">2</option>
                   {% endif %}
-                  {% if (((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int) >= 40 %}
+                  {% if (((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int) >= 50 %}
                   <option value = "3">3</option>
                   {% endif %}
                   </select>
