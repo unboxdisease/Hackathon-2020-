@@ -142,7 +142,7 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 1</a></h4>
               <p class ="status">CURRENT STATUS : 
-                {% if (((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int) <= 40 %} IN USE</p>
+                {% if (((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int) < 40 %} IN USE</p>
               
               <p class="description">BY : {{mach1.rollnumber}} <br>
                 ROOM NO : {{mach1.room}} <br>
@@ -159,7 +159,7 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 2</a></h4>
               <p class="status">CURRENT STATUS :
-                {% if (((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0)).seconds/60)|int) <= 40 %} IN USE</p>
+                {% if (((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0)).seconds/60)|int) < 40 %} IN USE</p>
               <p class = "description">
               BY : {{mach2.rollnumber}} <br>
             ROOM NO : {{mach2.room}} <br>
@@ -177,7 +177,7 @@
               <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
               <h4 class="title"><a href="">MACHINE 3</a></h4>
               <p class="status">CURRENT STATUS :
-                {% if (((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int) <= 40 %} IN USE</p>
+                {% if (((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int) < 40 %} IN USE</p>
               <p class = "description">BY : {{mach3.rollnumber}} <br>
                 ROOM NO : {{mach3.room}} <br>
               TIME ELAPSED : {{((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int}} minutes<br>
@@ -231,7 +231,7 @@
           
           <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
 
-            <form action="/" method="POST" role="form" class="php-email-form">
+            <form action="{{url_for('root')}}" method="POST"  >
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="integer" name="roll" class="form-control" id="roll" placeholder="Your rollnumber"  data-msg="Please enter at least 4 chars" />
@@ -249,9 +249,17 @@
               
               <div class="mb-3">
                 
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" style="  border: 0;
+  
+  
+  padding: 10px 32px;
+  color: #0880e8;
+  transition: 0.4s;
+  border-radius: 50px;
+  border: 2px solid #0880e8;
+  background: #fff;">Send Message</button></div>
             </form>
 
           
