@@ -44,7 +44,7 @@ def root():
             machine = form['num']
             
         )
-        if (now - machi[int(form['num']) - 1].time).seconds/60 < 40:
+        if (now - machi[int(form['num']) - 1].time).seconds/60 < 50:
 
         # if (now - machi[int(form['num']) - 1].time).seconds < 2400:
             return redirect (url_for('error'))
