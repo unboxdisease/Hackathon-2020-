@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Washing machine </title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+
+
+  <link href="{{url_for('static',filename='assets/css/style.css')}}" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+
+
+  <!-- ======= Header ======= -->
+  <!-- <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="#header" class="scrollto">Anyar</a></h1>
+       Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="#header" class="logo mr-auto scrollto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <!-- <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Deep Drop Down</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>End Header --> 
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">BAKUL - Washing Machine Booking </h2>
+          <p class="animated fadeInUp">Now You don't need to call your friends on first floor for Machine Status !!</p>
+          
+        </div>
+      </div>
+
+      
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">INSTRUCTIONS</h2>
+          
+          <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a> -->
+          <p class="animated fadeInUp"><ul  style="color: white;text-align: left;">
+            <li>Check if there is any free Machines</li>
+            <li>If yes then reserve a machine for yourself by clicking the RESERVE button below</li>
+            <li>Now enter your Roll Number and Room Number</li>
+            <li>After that a timer will be start and you have to start your machine within 10 Minutes</li>
+            <li>If failed to do so , your reservation will be cancelled and you will be banned 
+              from the machine for 5 minutes.<br>(So that others who were waiting get a chance ) </li>
+            </li>
+          </ul></p>
+          <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a> -->
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Icon Boxes Section ======= -->
+    <section id="icon-boxes" class="icon-boxes">
+      <div class="container">
+       
+        
+        
+
+
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box">
+              <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
+              <h4 class="title"><a href="">MACHINE 1</a></h4>
+              <p class ="status">CURRENT STATUS : 
+                {% if (((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int) <= 40 %} IN USE</p>
+              
+              <p class="description">BY : {{mach1.rollnumber}} <br>
+                ROOM NO : {{mach1.room}} <br>
+                TIME ELAPSED : {{((now.replace(microsecond=0)  - mach1.time.replace(microsecond=0)).seconds/60)|int }} minutes<br></p>
+              <progress value = "{{(now  - mach1.time).seconds/60|int}}" max = "40"></p> 
+                {% else %}
+                <p class="status">FREE</p>
+                {% endif %}
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
+              <h4 class="title"><a href="">MACHINE 2</a></h4>
+              <p class="status">CURRENT STATUS :
+                {% if (((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0)).seconds/60)|int) <= 40 %} IN USE</p>
+              <p class = "description">
+              BY : {{mach2.rollnumber}} <br>
+            ROOM NO : {{mach2.room}} <br>
+            TIME ELAPSED : {{((now.replace(microsecond=0)  - mach2.time.replace(microsecond=0) ).seconds/60)|int}} minutes<br>
+          
+          <progress value = "{{((now  - mach2.time).seconds/60)|int}}" max = "40"></p> 
+            {% else %}
+                <p class="status">FREE</p>
+                {% endif %}
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
+              <h4 class="title"><a href="">MACHINE 3</a></h4>
+              <p class="status">CURRENT STATUS :
+                {% if (((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int) <= 40 %} IN USE</p>
+              <p class = "description">BY : {{mach3.rollnumber}} <br>
+                ROOM NO : {{mach3.room}} <br>
+              TIME ELAPSED : {{((now.replace(microsecond=0)  - mach3.time.replace(microsecond=0)).seconds/60)|int}} minutes<br>
+
+              <progress value = "{{(now  - mach3.time).seconds/60|int}}" max = "40"></p>
+                {% else %}
+                <p class="status">FREE</p>
+                {% endif %}
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><img src="{{url_for('static',filename='img/housekeeping.png')}}"></div>
+              <h4 class="title"><a href="">MACHINE 4</a></h4>
+              <p class="status">CURRENT STATUS : coming soon</p>
+              
+            </div>
+          </div>
+
+         
+
+        </div>
+
+      </div>
+    </section><!-- End Icon Boxes Section -->
+
+    
+
+   
+
+
+
+    
+
+    <!-- ======= Cta Section ======= -->
+   
+
+    
+
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>MACHINE FULL</h2>
+         
+        </div>
+
+          
+          <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
+
+            <form action="/" method="POST" role="form" class="php-email-form">
+              
+            </form>
+            
+
+          
+
+        </div>
+        <div class="text-center"><button   style="  border: 0;
+            padding: 10px 32px;
+            color: #0880e8;
+            transition: 0.4s;
+            border-radius: 50px;
+            border: 2px solid #0880e8;
+            background: #fff;"><a href="{{url_for('root')}}">Back</a></button></div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End Team Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <span>GANJA CHAHIYE</span>
+          </div>
+          <div class="col-lg-6">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+ 
+  <script src="{{url_for('static',filename='assets/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/aos/aos.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static',filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>
